@@ -1,0 +1,35 @@
+{
+  "tarea": "s01-order-and-pay",
+  "ronda": "r01",
+  "harness_version": "v0.1.0",
+  "pregunta_guia": "¿Cómo resuelven otras apps pedir y pagar desde la mesa sin esperar al mozo?",
+  "tiempos": { "inicio": null, "fin": null },
+  "busquedas": [
+    { "herramienta": "search_flows", "plataforma": "ios", "modo": null, "query": "restaurant mobile order and pay at the table", "devueltos": 3, "utiles": 2 }
+  ],
+  "clusters": [
+    { "id": "c1", "nombre": "Mesa como contexto persistente", "descripcion": "La mesa se elige una vez y queda visible en todo el flujo" }
+  ],
+  "refs": [
+    {
+      "id": "r01-01",
+      "fuente": "mobbin",
+      "tipo": "flow",
+      "app": "Grill'd",
+      "plataforma": "ios",
+      "mobbin_url": "https://mobbin.com/flows/ac77a08d-565c-406d-afe7-36c099cc1691",
+      "image_url": "https://mobbin.com/api/mcp/short/TRizAG6J",
+      "momento": "identificar mesa",
+      "cluster": "c1",
+      "patron": "Selector Pickup / Delivery / Order at Table + input de nº de mesa",
+      "observacion": "Order at Table es una opción al nivel de Pickup y Delivery; al elegirla pide el número de mesa y luego lo muestra en el header del menú ('Order at Table · Table 12').",
+      "por_que_sirve": "Muestra cómo convivir con otros canales sin un flujo separado."
+    }
+  ],
+  "insights": [
+    { "id": "i1", "texto": "<afirmación observada>", "refs": ["r01-01"] }
+  ],
+  "descartadas": [
+    { "app": "<app>", "url": "<link>", "motivo": "<por qué no>" }
+  ]
+}
